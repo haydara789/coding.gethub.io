@@ -1,7 +1,62 @@
-.row {
-  margin-bottom: 15px;
+
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.row > div {
-  border: 2px solid red;
-  background-color: gray;
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.section {
+    border: 2px outset black;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+    background-color: aquamarine;
+}
+
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f1c40f; 
+    padding: 5px;
+    border: 2px outset black;
+}
+
+
+@media (min-width: 992px) {
+    .section {
+        width: 32%; 
+        float: left; 
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%; 
+        float: left;
+    }
+    #sushi {
+        width: 100%; 
+        clear: both;
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Each section takes full width */
+        float: none; /* Remove float */
+    }
 }
